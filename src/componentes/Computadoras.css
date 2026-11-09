@@ -1,0 +1,203 @@
+.computadoras {
+  padding: 2rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.computadoras_title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 2rem;
+  letter-spacing: -0.025em;
+}
+
+.computadoras_nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.computadoras_nav button {
+  background-color: #ffffff;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.computadoras_nav button:hover {
+  background-color: #f8fafc;
+  color: #111827;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+.computadoras_nav button.activo {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
+}
+
+.computadoras_content > div:not(.cargar-mas-contenedor) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.computadoras_card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  height: 100%;
+}
+
+.computadoras_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+  border-color: #cbd5e1;
+}
+
+.computadoras-img-contenedor {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.computadoras-img-contenedor img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.computadoras_card:hover .computadoras-img-contenedor img {
+  transform: scale(1.08);
+}
+
+.computadoras-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.computadoras-info small {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.computadoras-info h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #334155;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+  max-height: 2.8rem;
+  overflow: hidden;
+}
+
+.computadoras-info .precio {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.leer-mas-btn {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.6rem 1.25rem;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.computadoras_card:hover .leer-mas-btn {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+.cargar-mas-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.cargar-mas-btn {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+}
+
+.cargar-mas-btn:hover:not(:disabled) {
+  background-color: #1e293b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.35);
+}
+
+.cargar-mas-btn:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.charging, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.125rem;
+  color: #64748b;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px dashed #cbd5e1;
+  margin: 2rem 0;
+}
+
+.error {
+  color: #ef4444;
+  border-color: #fca5a5;
+  background-color: #fef2f2;
+}

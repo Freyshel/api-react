@@ -1,0 +1,166 @@
+.personajes {
+    padding: 2rem 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.personajes_title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 2rem;
+    letter-spacing: -0.025em;
+}
+
+.personajes_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+}
+
+.personajes_nav button {
+    background-color: #ffffff;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.personajes_nav button:hover {
+    background-color: #f8fafc;
+    color: #111827;
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+.personajes_nav button.activo {
+    background-color: #10b981;
+    color: #ffffff;
+    border-color: #10b981;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.personajes_content>div:not(.cargar-mas-contenedor) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.personajes_card {
+    background-color: #1f2937;
+    color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.personajes_card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.4);
+}
+
+.personajes-img-contenedor {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background-color: #111827;
+}
+
+.personajes-img-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.personajes_card:hover .personajes-img-contenedor img {
+    transform: scale(1.05);
+}
+
+.personajes-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.personajes-info h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #10b981;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.personajes-info p {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+}
+
+.cargar-mas-contenedor {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.cargar-mas-btn {
+    background-color: #10b981;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.cargar-mas-btn:hover:not(:disabled) {
+    background-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+}
+
+.cargar-mas-btn:disabled {
+    background-color: #4b5563;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.charging,
+.error {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.125rem;
+    color: #64748b;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 2px dashed #cbd5e1;
+    margin: 2rem 0;
+}
+
+.error {
+    color: #ef4444;
+    border-color: #fca5a5;
+    background-color: #fef2f2;
+}
